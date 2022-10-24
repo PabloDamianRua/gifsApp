@@ -1,2 +1,14 @@
 <p>resultados works!</p>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid odio repudiandae ipsa facilis rerum debitis ad repellat? Officiis quae beatae earum voluptatibus minima, quas corporis, nam accusantium expedita, autem officia.
+
+<div class="row">
+    <div *ngFor="let item of getResultados"
+        class="col-md-4 col-sm-6">
+        <div class="card">
+            <img [src]="item.images.downsized_medium.url" alt="">
+            
+            <div class="card-body">
+                {{item.title}}
+            </div>
+        </div>
+    </div>
+</div>
