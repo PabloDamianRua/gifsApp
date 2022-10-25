@@ -1,3 +1,4 @@
+import { ReturnStatement } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { GifsService } from '../services/gifs.service';
 
@@ -12,8 +13,13 @@ get getResultados()
 {
   return this.servicio.resultados;
 }
-  constructor(private servicio: GifsService) { }
 
+get getValorBuscado()
+{
+  return this.servicio.getValorBuscado;
+
+}
+  constructor(private servicio: GifsService) { }
 
 
 }

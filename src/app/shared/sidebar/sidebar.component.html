@@ -4,6 +4,7 @@
         <a href="#"
             class=" list-group-item list-group-item-avtion"
             *ngFor="let item of histirorialBusqueda"
+            (click) = "buscar(item, getLimite)"
         >
             {{item| titlecase}}
         </a>

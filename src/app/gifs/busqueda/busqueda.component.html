@@ -7,3 +7,11 @@
     (focus)="seleccionar()"
     #txtBuscar
 >
+<h5>Cant. reg. a mostrar:</h5>
+<input 
+    type="text" 
+    class="form-control"
+    (keyup.enter)="buscar()"
+    (focusout)="actualizarLimite()"
+    value="10"
+    #txtLimite>

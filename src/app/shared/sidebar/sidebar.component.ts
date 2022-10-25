@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { retry } from 'rxjs';
 import { GifsService } from '../../gifs/services/gifs.service';
 
 @Component({
@@ -15,4 +16,14 @@ export class SidebarComponent {
   return this.servicio.historial;
  }
 
+ get getLimite():number
+ {
+  return this.servicio.getLimite;
+ }
+
+ 
+ buscar(termino:string, limite: number)
+ {
+  this.servicio.buscarGifs(termino, limite);
+ }
 }
